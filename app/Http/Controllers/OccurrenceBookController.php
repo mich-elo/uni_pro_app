@@ -2,43 +2,64 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StorePizzaRequest;
-use App\Http\Requests\UpdatePizzaRequest;
-use App\Models\OccurrenceBook;
+use Illuminate\Http\Request;
 
-class OccurrenceBookController  extends Controller
+class OccurrenceBookController extends Controller
 {
-    public function index() {
-        $OccurrenceBook = OccurrenceBook::latest()->get();      
-        return view('OccurrenceBook.index', [
-            'OccurrenceBook' => $OccurrenceBook,
-        ]);
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
     }
 
-    public function show($id) {
-        // Retrieve a single pizza by its ID
-        $Occurrence= OccurrenceBook::findOrFail($id);
-        return view('OccurenceBook.show', ['OccurrenceBook' => OccurrenceBook]);
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+        return view('OccurrenceBook.createOccurrenceBook');
     }
 
-    public function create() {
-        return view('Occurence.create');
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
     }
 
-    public function store() {
-        // Create a new Pizza instance and save it to the database
-        $OccurrenceBook = new OccurrenceBook ();
-        $OccurrenceBook->officer = request('officer');
-        $OccurrenceBook->shift = request('shift');
-        $OccurrenceBook->occurrence = request('occurrence');
-        $OccurrenceBook->subject = request('subject');
-        $OccurrenceBook->ref = request('ref');
-        $OccurrenceBook->entry = request('entry');
-        $OccurrenceBook->datetime = request('datetime');
-        $OccurrenceBook->save();
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
 
-    
-        // Redirect to the index page after saving
-      return view('OccurrenceBook.tableOccurrenceBook');
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('dockets', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('subject');
+            $table->string('occurrence');
         });
     }
 

@@ -23,7 +23,6 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -39,31 +38,14 @@ require __DIR__.'/auth.php';
 Routes for OccurrenceBook
 */
 
-Route::view('/OccurrenceBook/searchOccurrenceBook', 'OccurrenceBook.searchOccurrenceBook')->name('OccurrenceBook.searchOccurrenceBook');
-Route::view('/OccurrenceBook/createOccurrenceBook', 'OccurrenceBook.createOccurrenceBook')->name('OccurrenceBook.createOccurrenceBook');
-Route::view('/OccurrenceBook/createOccurrenceBook', 'OccurrenceBook.createOccurrenceBook')->name('OccurrenceBook.createOccurrenceBook');
-Route::view('/OccurrenceBook/tableOccurrenceBook', 'OccurrenceBook.tableOccurrenceBook')->name('OccurrenceBook.tableOccurrenceBook');
 
-
-/*
-Routes for Daily Register
-*/
-Route::view('daily_register', 'daily_register.daily_register')->name('daily_register.daily_register');
-Route::view('/OccurrenceBook/createOccurrenceBook', 'OccurrenceBook.createOccurrenceBook')->name('OccurrenceBook.createOccurrenceBook');
-Route::view('/OccurrenceBook/createOccurrenceBook', 'OccurrenceBook.createOccurrenceBook')->name('OccurrenceBook.createOccurrenceBook');
-Route::view('/OccurrenceBook/tableOccurrenceBook', 'OccurrenceBook.tableOccurrenceBook')->name('OccurrenceBook.tableOccurrenceBook');
-
-/*
-Routes for Docket
-*/
-Route ::get('/Docket/searchDocket', function (){
-    return view('Docket.searchDocket');
-}) ->name('Docket.searchDocket');
-
-Route::get('/Docket/createDocket', [DocketController::class, 'create'])->name('Docket.createDocket');
-Route::post('/create-occurrence-book', [OccurrenceBookController::class, 'store'])->name('createOccurrenceBook.store');
-
-
-
-
-Route::get('/occurrence-book/table', [OccurrenceBookController::class, 'create'])->name('occurrence-book.table');
+/**
+ * NOTE TO BILLS 
+ * 
+ * Read the laravel documentation on controllers to understand what this code does
+ */
+ Route::resources([
+    'occurrence' => OccurrenceBookController::class,
+    'docket' => DocketController::class,
+    'daily-register' => DailyRegisterController::class
+]);

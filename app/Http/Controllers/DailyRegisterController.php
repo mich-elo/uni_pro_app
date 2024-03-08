@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Storedaily_registerRequest;
-use App\Http\Requests\Updatedaily_registerRequest;
-use App\Models\daily_register;
+use Illuminate\Http\Request;
 
 class DailyRegisterController extends Controller
 {
@@ -22,12 +20,13 @@ class DailyRegisterController extends Controller
     public function create()
     {
         //
+        return view('DailyRegister.createDailyRegister');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Storedaily_registerRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class DailyRegisterController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(daily_register $daily_register)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +42,7 @@ class DailyRegisterController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(daily_register $daily_register)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +50,7 @@ class DailyRegisterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Updatedaily_registerRequest $request, daily_register $daily_register)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +58,7 @@ class DailyRegisterController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(daily_register $daily_register)
+    public function destroy(string $id)
     {
         //
     }
