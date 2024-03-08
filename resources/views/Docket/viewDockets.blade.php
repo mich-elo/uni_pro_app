@@ -3,10 +3,10 @@
         <div class="px-4 w-full max-w-[700px]">
             <div class="relative">
                 <div class="w-full">
-                    <h1 class=" w-full mb-5 text-4xl">Create Docket</h1>
+                    <h1 class=" w-full mb-5 text-4xl">Docket Summary</h1>
                 </div>
             </div>
-            
+
             <div class="overflow-x-auto">
                 <table class="table">
                     <!-- head -->
