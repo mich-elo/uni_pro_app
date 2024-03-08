@@ -18,7 +18,10 @@
                             id="shift" 
                             class="block mx-auto mt-1 w-full" 
                             type="text" name="shift"
-                            :value="old('shift')" required autofocus autocomplete="off" 
+                            :value="old('shift')" 
+                            required 
+                            autofocus 
+                            autocomplete="off" 
                         />
                         <x-input-error :messages="$errors->get('shift')" class="mt-2 focus:ring-orange-500" />
                     </div>

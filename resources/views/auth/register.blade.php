@@ -1,7 +1,7 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf
-        <div class="mt-10 grid grid-rows-1 gap-7 w-full max-w-[500px]">
+        <div class="mt-10 grid grid-rows-1 gap-2 w-full max-w-[500px]">
             <!-- Name -->
             <div class="relative">
                 <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />

@@ -5,7 +5,7 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <div class="mt-10 grid grid-rows-1 gap-7 w-full max-w-[500px]">
+        <div class="mt-10 grid grid-rows-1 gap-2 w-full max-w-[500px]">
             <!-- Email Address -->
             <div class="relative">
                 <x-text-input 
